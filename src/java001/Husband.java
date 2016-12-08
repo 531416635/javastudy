@@ -19,6 +19,11 @@ public class Husband {
 	}
 
 	public String getSex() {
+		if("0".equals(sex)){
+			sex = "女";
+		}else if("1".equals(sex)){
+			sex = "男";
+		}
 		return sex;
 	}
 
@@ -31,7 +36,13 @@ public class Husband {
 	}
 
 	public void setAge(int age) {
-		this.age = String.valueOf(age);
+		//若将年龄由int类型改为string类型，只需内部转换即可
+		//封装使我们能够很容易的改变类的内部实现，而无需修改使用了该类的客户代码
+		if(age>120){
+			System.out.println("ERROR: error age input ...");
+		}else{
+			this.age = String.valueOf(age);
+		}
 	}
 
 	public void setWife(Wife wife) {
