@@ -9,11 +9,11 @@ public class Person {
 		System.out.println("person constrctor ... "+name);
 	}
 
-	public String getName() {
+	protected String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	protected void setName(String name) {
 		this.name = name;
 	}
 
@@ -31,6 +31,11 @@ public class Person {
 
 	public void setSex(String sex) {
 		this.sex = sex;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + "]";
 	}
 	
 }

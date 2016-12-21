@@ -8,4 +8,9 @@ public class Husband extends Person{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		setName("protected -- name -- test");
+		return super.toString();
+	}
 }
